@@ -1,4 +1,4 @@
-package com.bridgelabz.Regex;
+package com.bridgelabz.Regex.common;
 
 /**
  * Hello world!
