@@ -26,5 +26,14 @@ public class UserRegistrationImpl implements IUser {
 		}
 
 	}
+	@Override
+	public void eMailValidation(User user) {
+		patternMatch = Pattern.matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)+(\\.{0,0})$", user.geteMail());
+		if(patternMatch == false) {
+			System.out.println("Invalid Email ID..");
+		}else {
+			System.out.println("User Email ID : "+user.geteMail());
+		}
+	}
 
 }

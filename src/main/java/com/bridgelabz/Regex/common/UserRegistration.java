@@ -9,15 +9,24 @@ import com.bridgelabz.Regex.services.UserRegistrationImpl;
 public class UserRegistration {
 	static String firstName;
 	static String lastName;
+	static String eMail;
 	public static void main(String[] args) {
 		UserRegistrationImpl obj = new UserRegistrationImpl();
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter first name : ");
 		firstName = scanner.next();
-		System.out.println("Enter last name : ");
+		System.out.print("Enter last name : ");
 		lastName = scanner.next();
-		obj.firstNameValidation(new User(firstName,lastName));
-		obj.lastNameValidation(new User(firstName,lastName));
+		System.out.print("Enter email id : ");
+		eMail = scanner.next();
+		User user = new User(firstName, lastName, eMail);
+		obj.firstNameValidation(user);
+		obj.lastNameValidation(user);
+		obj.eMailValidation(user);
+		
+		
+		
+		
 	}
 
 }
