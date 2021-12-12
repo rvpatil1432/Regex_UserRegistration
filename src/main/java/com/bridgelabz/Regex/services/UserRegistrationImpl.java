@@ -16,5 +16,15 @@ public class UserRegistrationImpl implements IUser {
 			System.out.println("User Name : "+user.getFirstName());
 		}
 	}
+	@Override
+	public void lastNameValidation(User user) {
+		patternMatch = Pattern.matches("^[A-Z][a-z]{2,}", user.getLastName());
+		if(patternMatch == false) {
+			System.out.println("Invalid last name..");
+		}else {
+			System.out.println("User last Name : "+user.getLastName());
+		}
+
+	}
 
 }
