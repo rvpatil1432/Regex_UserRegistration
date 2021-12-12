@@ -35,5 +35,14 @@ public class UserRegistrationImpl implements IUser {
 			System.out.println("User Email ID : "+user.geteMail());
 		}
 	}
+	@Override
+	public void phoneNumValidation(User user) {
+		patternMatch = Pattern.matches("^[789]\\d{9}$", user.getPhoneNumber());
+		if(patternMatch == false) {
+			System.out.println("Invalid phone number..");
+		}else {
+			System.out.println("User Phone Number : "+user.getPhoneNumber());
+		}
+	}
 
 }
