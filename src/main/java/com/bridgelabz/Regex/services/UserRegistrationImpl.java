@@ -44,5 +44,12 @@ public class UserRegistrationImpl implements IUser {
 			System.out.println("User Phone Number : "+user.getPhoneNumber());
 		}
 	}
+	@Override
+	public void passwordValidation(User user) {
+		patternMatch = Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\\]).{8,32}$", user.getPassword());
+		if(patternMatch == false) {
+			System.out.println("Invalid password..");
+		}
+	}
 
 }

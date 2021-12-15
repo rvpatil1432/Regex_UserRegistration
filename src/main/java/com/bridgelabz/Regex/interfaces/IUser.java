@@ -8,4 +8,5 @@ public interface IUser {
 	public void lastNameValidation(User user);
 	public void eMailValidation(User user);
 	public void phoneNumValidation(User user);
+	public void passwordValidation(User user);
 }

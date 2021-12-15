@@ -11,6 +11,7 @@ public class UserRegistration {
 	static String lastName;
 	static String eMail;
 	static String phoneNumber;
+	static String password; 
 	public static void main(String[] args) {
 		UserRegistrationImpl obj = new UserRegistrationImpl();
 		Scanner scanner = new Scanner(System.in);
@@ -22,11 +23,12 @@ public class UserRegistration {
 		eMail = scanner.next();
 		System.out.print("Enter phone number : ");
 		phoneNumber = scanner.next();
-		User user = new User(firstName, lastName, eMail,phoneNumber);
+		User user = new User(firstName, lastName, eMail,phoneNumber,password);
 		obj.firstNameValidation(user);
 		obj.lastNameValidation(user);
 		obj.eMailValidation(user);
 		obj.phoneNumValidation(user);
+		obj.passwordValidation(user);
 	}
 
 }
