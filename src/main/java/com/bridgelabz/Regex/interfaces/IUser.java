@@ -4,9 +4,9 @@ import com.bridgelabz.Regex.entity.User;
 
 public interface IUser {
 
-	public void firstNameValidation(User user);
-	public void lastNameValidation(User user);
-	public void eMailValidation(User user);
-	public void phoneNumValidation(User user);
-	public void passwordValidation(User user);
+	public boolean firstNameValidation(User user);
+	public boolean lastNameValidation(User user);
+	public boolean eMailValidation(User user);
+	public boolean phoneNumValidation(User user);
+	public boolean passwordValidation(User user);
 }
