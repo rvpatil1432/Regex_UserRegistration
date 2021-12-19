@@ -26,7 +26,8 @@ public class UserRegistration {
 		User user = new User(firstName, lastName, eMail,phoneNumber,password);
 		obj.firstNameValidation(user);
 		obj.lastNameValidation(user);
-		obj.eMailValidation(user);
+		//obj.eMailValidation(user);
+		obj.eMailValidation(eMail);
 		obj.phoneNumValidation(user);
 		obj.passwordValidation(user);
 	}

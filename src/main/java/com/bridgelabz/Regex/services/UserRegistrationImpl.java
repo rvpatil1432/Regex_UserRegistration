@@ -19,8 +19,9 @@ public class UserRegistrationImpl implements IUser {
 
 	}
 	@Override
-	public boolean eMailValidation(User user) {
-		patternMatch = Pattern.matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)+(\\.{0,0})$", user.geteMail());
+	//public boolean eMailValidation(User user) {
+	public boolean eMailValidation(String eMails) {
+		patternMatch = Pattern.matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)+(\\.{0,0})$", eMails);
 		return patternMatch;
 	}
 	@Override
