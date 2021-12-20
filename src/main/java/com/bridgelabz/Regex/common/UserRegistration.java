@@ -23,6 +23,8 @@ public class UserRegistration {
 		eMail = scanner.next();
 		System.out.print("Enter phone number : ");
 		phoneNumber = scanner.next();
+		System.out.print("Enter password : ");
+		password = scanner.next();
 		User user = new User(firstName, lastName, eMail,phoneNumber,password);
 		obj.firstNameValidation(user);
 		obj.lastNameValidation(user);
